@@ -1,0 +1,102 @@
+No current session found, using default AWS::AccountId
+Initializing the lambda functions containers.
+Local image is up-to-date
+Using local image: public.ecr.aws/lambda/python:3.9-rapid-x86_64.
+
+Mounting /Users/joe/dev/EddySplunk/SampleLambda/sample-lambda/.aws-sam/build/HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+Containers Initialization is done.
+Mounting HelloWorldFunction at http://127.0.0.1:3000/invoke [GET]
+You can now browse to the above endpoints to invoke your functions. You do not need to restart/reload SAM CLI while working on your functions, changes will be reflected instantly/automatically. If you used sam build before running local commands, you will need to re-run sam build for the changes to be picked up. You only need to restart SAM CLI if you update your AWS SAM template
+2024-08-29 22:47:49 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:3000
+2024-08-29 22:47:49 [33mPress CTRL+C to quit[0m
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 916b5918-9e21-4f71-804d-d3002ba8a0f8 Version: $LATEST
+END RequestId: bebe0c7e-a13d-4da3-a8ff-9f5ee1fcd7ee
+REPORT RequestId: bebe0c7e-a13d-4da3-a8ff-9f5ee1fcd7ee	Init Duration: 0.16 ms	Duration: 1135.66 ms	Billed Duration: 1136 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:47:54 127.0.0.1 - - [29/Aug/2024 22:47:54] "GET /invoke HTTP/1.1" 200 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: a43509a6-3893-4d97-a951-53c0683f9ad7 Version: $LATEST
+END RequestId: d4640b34-4f1e-4346-b23b-96fc39966c11
+REPORT RequestId: d4640b34-4f1e-4346-b23b-96fc39966c11	Duration: 548.91 ms	Billed Duration: 549 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:47:55 127.0.0.1 - - [29/Aug/2024 22:47:55] "GET /invoke HTTP/1.1" 200 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: c6193fa5-1fd0-4b60-8345-794e46c74442 Version: $LATEST
+END RequestId: 1e97ffc1-24c7-4096-995e-c3f270140460
+REPORT RequestId: 1e97ffc1-24c7-4096-995e-c3f270140460	Duration: 597.83 ms	Billed Duration: 598 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:47:56 127.0.0.1 - - [29/Aug/2024 22:47:56] "GET /invoke HTTP/1.1" 200 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 8dde78b5-5676-4977-8774-79d34c29faf0 Version: $LATEST
+END RequestId: f78bf767-a993-41c7-b7e6-82b69ad8b671
+REPORT RequestId: f78bf767-a993-41c7-b7e6-82b69ad8b671	Duration: 539.24 ms	Billed Duration: 540 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:47:57 127.0.0.1 - - [29/Aug/2024 22:47:57] "GET /invoke HTTP/1.1" 200 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 0d55f489-fdc9-4a27-8aab-4fc4a3916233 Version: $LATEST
+END RequestId: a700d51a-2c5b-4e6a-800a-a5b1aa75ea49
+REPORT RequestId: a700d51a-2c5b-4e6a-800a-a5b1aa75ea49	Duration: 638.17 ms	Billed Duration: 639 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:47:57 127.0.0.1 - - [29/Aug/2024 22:47:57] "GET /invoke HTTP/1.1" 200 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 0cac6482-0f2a-47bd-8d78-f7131c21786e Version: $LATEST
+END RequestId: 53ece74b-d754-459d-858f-2b4b5de1496b
+REPORT RequestId: 53ece74b-d754-459d-858f-2b4b5de1496b	Duration: 598.40 ms	Billed Duration: 599 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:47:58 127.0.0.1 - - [29/Aug/2024 22:47:58] "GET /invoke HTTP/1.1" 200 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 871f15f8-f7b2-4530-b362-787ab5e1ada6 Version: $LATEST
+END RequestId: 2e149820-d6d9-4f2e-9f9c-7533c9786c5a
+REPORT RequestId: 2e149820-d6d9-4f2e-9f9c-7533c9786c5a	Duration: 545.26 ms	Billed Duration: 546 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:47:59 127.0.0.1 - - [29/Aug/2024 22:47:59] "GET /invoke HTTP/1.1" 200 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: c7ee4a76-05a9-475d-ab91-4ed94f95c461 Version: $LATEST
+END RequestId: 8265e740-a926-4066-a785-813ea213246b
+REPORT RequestId: 8265e740-a926-4066-a785-813ea213246b	Duration: 592.46 ms	Billed Duration: 593 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:48:00 127.0.0.1 - - [29/Aug/2024 22:48:00] "GET /invoke HTTP/1.1" 200 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: d2845ae0-5a04-4ab3-b976-0d050e1cd4f4 Version: $LATEST
+END RequestId: a06d65c4-2791-4554-a2f5-bc92e1440008
+REPORT RequestId: a06d65c4-2791-4554-a2f5-bc92e1440008	Duration: 557.76 ms	Billed Duration: 558 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:48:00 127.0.0.1 - - [29/Aug/2024 22:48:00] "GET /invoke HTTP/1.1" 200 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: d4368d66-8188-4a55-bbb8-9552cd22acf8 Version: $LATEST
+END RequestId: 6a5c783b-5de0-4bc5-8d1a-cd7178eb924e
+REPORT RequestId: 6a5c783b-5de0-4bc5-8d1a-cd7178eb924e	Duration: 548.08 ms	Billed Duration: 549 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+
+No Content-Type given. Defaulting to 'application/json'.
+2024-08-29 22:48:01 127.0.0.1 - - [29/Aug/2024 22:48:01] "GET /invoke HTTP/1.1" 200 -
