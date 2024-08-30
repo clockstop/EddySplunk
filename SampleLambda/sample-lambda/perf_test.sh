@@ -25,6 +25,8 @@ fi
 
 # File to record invocation times
 TIME_FILE="invocation_times_${NUM_INVOCATIONS}.txt"
+# Clear previous results
+> $TIME_FILE
 
 # Invoke Lambda function and record durations
 echo "Invoking Lambda function $NUM_INVOCATIONS times..."
