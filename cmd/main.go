@@ -41,6 +41,7 @@ func logToFile(eventType, details string) {
 
 // Main function
 func main() {
+	fmt.Println("Extension started, attempting registration.")
 	extensionID := registerExtension()
 
 	for {
@@ -99,6 +100,7 @@ func registerExtension() string {
 	json.NewDecoder(resp.Body).Decode(&result)
 	extensionID := result["extensionId"].(string)
 
+	fmt.Println("Extension registration successful. extensionID:", extensionID)
 	return extensionID
 }
 
