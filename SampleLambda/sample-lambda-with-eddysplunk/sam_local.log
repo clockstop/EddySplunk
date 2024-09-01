@@ -1,0 +1,195 @@
+No current session found, using default AWS::AccountId
+Initializing the lambda functions containers.
+Decompressing /Users/joe/dev/EddySplunk/SampleLambda/sample-lambda-with-eddysplunk/extension/extension.zip
+EddySplunkLayer is a local Layer in the template
+Local image is up-to-date
+Building image.....................
+Using local image: samcli/lambda-python:3.9-x86_64-1949afbf7b073482f0c2a73ab.
+
+Mounting /Users/joe/dev/EddySplunk/SampleLambda/sample-lambda-with-eddysplunk/.aws-sam/build/HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+Containers Initialization is done.
+Mounting HelloWorldFunction at http://127.0.0.1:3000/invoke [GET]
+You can now browse to the above endpoints to invoke your functions. You do not need to restart/reload SAM CLI while working on your functions, changes will be reflected instantly/automatically. If you used sam build before running local commands, you will need to re-run sam build for the changes to be picked up. You only need to restart SAM CLI if you update your AWS SAM template
+2024-08-31 23:19:14 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:3000
+2024-08-31 23:19:14 [33mPress CTRL+C to quit[0m
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:19:44,674 [ERROR] (rapid) Init failed InvokeID= error=Runtime exited with error: exit status 2
+01 Sep 2024 06:19:44,677 [ERROR] (rapid) Invoke failed error=Runtime exited with error: exit status 2 InvokeID=35916f41-fa49-4ad0-9f40-5a6f0fd22dea
+01 Sep 2024 06:19:44,677 [ERROR] (rapid) Invoke DONE failed: Sandbox.Failure
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:19:45 127.0.0.1 - - [31/Aug/2024 23:19:45] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: e1c96337-f3e2-46f3-9e9c-d246e9e2a3c1 Version: $LATEST
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:19:45,928 [ERROR] (rapid) Invoke failed error=Runtime exited with error: exit status 2 InvokeID=5c2334c5-0622-4356-882f-3a0e46c8a07c
+01 Sep 2024 06:19:45,929 [ERROR] (rapid) Invoke DONE failed: Runtime.ExitError
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:19:46 127.0.0.1 - - [31/Aug/2024 23:19:46] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 9c8dc40a-7a37-476c-9d06-e9c32a03396b Version: $LATEST
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:19:47,187 [ERROR] (rapid) Invoke failed error=Runtime exited with error: exit status 2 InvokeID=395a4737-91bd-41ec-bc53-7f2c76bd7f4f
+01 Sep 2024 06:19:47,188 [ERROR] (rapid) Invoke DONE failed: Runtime.ExitError
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:19:47 127.0.0.1 - - [31/Aug/2024 23:19:47] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: ab9409c2-9acc-4547-badc-07d5e8f61e1b Version: $LATEST
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:19:48,472 [ERROR] (rapid) Invoke failed error=Runtime exited with error: exit status 2 InvokeID=5693d71c-c2f3-4b7f-abcf-86746261c291
+01 Sep 2024 06:19:48,473 [ERROR] (rapid) Invoke DONE failed: Runtime.ExitError
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:19:49 127.0.0.1 - - [31/Aug/2024 23:19:49] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: ec8de63d-98e0-4d73-a946-3ed925f5eb2c Version: $LATEST
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:19:49,871 [ERROR] (rapid) Invoke failed InvokeID=2a69a997-c418-4c0d-b370-6dea53b81334 error=Runtime exited with error: exit status 2
+01 Sep 2024 06:19:49,871 [ERROR] (rapid) Invoke DONE failed: Runtime.ExitError
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:19:50 127.0.0.1 - - [31/Aug/2024 23:19:50] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 7949bb5f-0e6c-4273-b911-91c1654efa3d Version: $LATEST
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:19:51,077 [ERROR] (rapid) Invoke failed error=Runtime exited with error: exit status 2 InvokeID=b5a4acf6-96d7-4420-8902-1e4fd8ed4c15
+01 Sep 2024 06:19:51,077 [ERROR] (rapid) Invoke DONE failed: Runtime.ExitError
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:19:51 127.0.0.1 - - [31/Aug/2024 23:19:51] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 6983d5cd-f5e2-41c0-b32b-0d1f343f0aeb Version: $LATEST
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:19:54,319 [ERROR] (rapid) Invoke failed error=Runtime exited with error: exit status 2 InvokeID=5d85f628-2702-4aa4-94db-9da83a222ad8
+01 Sep 2024 06:19:54,325 [ERROR] (rapid) Invoke DONE failed: Runtime.ExitError
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:19:55 127.0.0.1 - - [31/Aug/2024 23:19:55] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 737913c6-8ce0-4f06-b3cb-3197cab88ebf Version: $LATEST
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:19:57,533 [ERROR] (rapid) Invoke failed error=Runtime exited with error: exit status 2 InvokeID=68a6948b-6447-4c55-882c-6ad6c5d077cd
+01 Sep 2024 06:19:57,533 [ERROR] (rapid) Invoke DONE failed: Runtime.ExitError
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:19:58 127.0.0.1 - - [31/Aug/2024 23:19:58] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: fe660d71-6ede-49e1-b0c7-d05d149f6c24 Version: $LATEST
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:19:59,891 [ERROR] (rapid) Invoke failed error=Runtime exited with error: exit status 2 InvokeID=8e684279-9f73-49e1-9e26-987290eb8dc0
+01 Sep 2024 06:19:59,892 [ERROR] (rapid) Invoke DONE failed: Runtime.ExitError
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:20:00 127.0.0.1 - - [31/Aug/2024 23:20:00] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 9e1abf91-e82f-422b-8022-89bc6c7f2a81 Version: $LATEST
+Extension started, attempting registration.
+Response status: 403 Forbidden
+panic: interface conversion: interface {} is nil, not string
+
+goroutine 1 [running]:
+main.registerExtension()
+	/Users/joe/dev/EddySplunk/cmd/main.go:100 +0x6e5
+main.main()
+	/Users/joe/dev/EddySplunk/cmd/main.go:44 +0x4f
+01 Sep 2024 06:20:02,236 [ERROR] (rapid) Invoke failed error=Runtime exited with error: exit status 2 InvokeID=23f06271-42f2-4975-abee-b68b474b93fa
+01 Sep 2024 06:20:02,270 [ERROR] (rapid) Invoke DONE failed: Runtime.ExitError
+
+Invalid lambda response received: Lambda response must be valid json
+2024-08-31 23:20:03 127.0.0.1 - - [31/Aug/2024 23:20:03] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -

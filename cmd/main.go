@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -67,6 +66,8 @@ func registerExtension() string {
 		registerPayload string = `{"events":["INVOKE", "SHUTDOWN"]}`
 	)
 	reader := strings.NewReader(registerPayload)
+
+	fmt.Println("Registration Payload: \n" + registerPayload)
 
 	// Create a new POST request
 	req, err := http.NewRequest("POST", extensionUrl + "/register", reader)
