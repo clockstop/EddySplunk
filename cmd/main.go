@@ -3,18 +3,19 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
-	"time"
 	"strings"
+	"time"
 )
 
 // Event types
 const (
-	InitEvent    = "INIT"
-	InvokeEvent  = "INVOKE"
+	InitEvent     = "INIT"
+	InvokeEvent   = "INVOKE"
 	ShutdownEvent = "SHUTDOWN"
 )
 
@@ -24,14 +25,14 @@ func logToFile(eventType, details string) {
 	timestamp := time.Now().Format(time.RFC3339)
 	logMessage := fmt.Sprintf("%s: %s - %s\n", timestamp, eventType, details)
 	f, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
-	
+
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	defer f.Close()
 
-	// WriteString returns 2 args, first is number of bytes (ignored), second is error. 
+	// WriteString returns 2 args, first is number of bytes (ignored), second is error.
 	// If err != nil, then it logs the fatal error.
 	if _, err := f.WriteString(logMessage); err != nil {
 		log.Fatal(err)
@@ -62,37 +63,40 @@ func main() {
 func registerExtension() string {
 	var (
 		extensionApiHost string = os.Getenv("AWS_LAMBDA_RUNTIME_API")
-		extensionUrl string = fmt.Sprintf("http://%s/2020-01-01/extension", extensionApiHost)
-		registerPayload string = `{"events":["INVOKE", "SHUTDOWN"]}`
+		extensionUrl     string = fmt.Sprintf("http://%s/2020-01-01/extension", extensionApiHost)
+		registerPayload  string = `{"events":["INVOKE"]}`
 	)
 	reader := strings.NewReader(registerPayload)
 
+	fmt.Println("Lambda Runtime API: " + extensionApiHost)
 	fmt.Println("Registration Payload: \n" + registerPayload)
 
 	// Create a new POST request
-	req, err := http.NewRequest("POST", extensionUrl + "/register", reader)
+	req, err := http.NewRequest("POST", extensionUrl+"/register", reader)
 	if err != nil {
 		fmt.Println("Error creating request:", err)
 		return "nil"
 	}
 
-	// Set the Content-Type header
-	req.Header.Set("Content-Type", "application/json")
+	fmt.Println("Request: ", req)
 
 	// Set the Lambda-Extension-Name header
 	req.Header.Set("Lambda-Extension-Name", "eddysplunk")
 
-    // Send the request using http.DefaultClient
-    resp, err := http.DefaultClient.Do(req)
-    if err != nil {
-        fmt.Println("Error sending request:", err)
-        log.Fatal(err)
-    }
+	// Send the request using http.DefaultClient
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		fmt.Println("Error sending request:", err)
+		log.Fatal(err)
+	}
 
-    defer resp.Body.Close()
+	resBody, err := io.ReadAll(resp.Body)
 
-    // Handle the response
-    fmt.Println("Response status:", resp.Status)
+	defer resp.Body.Close()
+
+	// Handle the response
+	fmt.Println("Response status:", resp.Status)
+	fmt.Printf("Response body: %s\n", resBody)
 	if err != nil {
 		log.Fatal(err)
 	}

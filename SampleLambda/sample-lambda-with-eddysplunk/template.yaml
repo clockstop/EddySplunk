@@ -7,21 +7,25 @@ Description: >
 Globals:
   Function:
     Timeout: 3
-    MemorySize: 128
+    MemorySize: 256
 
 Resources:
   EddySplunkLayer:
     Type: AWS::Serverless::LayerVersion
     Properties:
-      LayerName: EddySplunkLayer
+      LayerName: eddy-splunk-extension
       Description: Adds splunk forwarding to lambda.
-      ContentUri: extension/extension.zip  # Path to the folder containing the `extension.zip`
+      ContentUri: .  # Path to the folder containing the `extension.zip`
       CompatibleRuntimes:
-        - provided.al2023
+        - nodejs12.x
+        - python3.9
+        - java11
+        - dotnetcore3.1
 
   HelloWorldFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
+      FunctionName: go-example-using-eddy-splunk
       CodeUri: hello_world/
       Layers:
         - !Ref EddySplunkLayer
