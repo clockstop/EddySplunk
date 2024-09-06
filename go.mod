@@ -1,3 +1,3 @@
-module github.com/clockstop/EddySplunk
+module github.com/clockstop/splunkeddy
 
 go 1.23.0

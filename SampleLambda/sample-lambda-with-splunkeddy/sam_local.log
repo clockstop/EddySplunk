@@ -1,0 +1,222 @@
+No current session found, using default AWS::AccountId
+Initializing the lambda functions containers.
+splunkeddyLayer is a local Layer in the template
+Local image is up-to-date
+Building image....................
+Using local image: samcli/lambda-python:3.9-x86_64-9f7ebc814fead72980903b65a.
+
+Mounting /Users/joe/dev/splunkeddy/SampleLambda/sample-lambda-with-splunkeddy/.aws-sam/build/HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+Containers Initialization is done.
+Mounting HelloWorldFunction at http://127.0.0.1:3000/invoke [GET]
+You can now browse to the above endpoints to invoke your functions. You do not need to restart/reload SAM CLI while working on your functions, changes will be reflected instantly/automatically. If you used sam build before running local commands, you will need to re-run sam build for the changes to be picked up. You only need to restart SAM CLI if you update your AWS SAM template
+2024-09-05 22:37:20 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:3000
+2024-09-05 22:37:20 [33mPress CTRL+C to quit[0m
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: 0fcf902b-b809-42bd-9fa4-5cdd3938be56 Version: $LATEST
+Extension started, attempting registration.
+06 Sep 2024 05:37:25,936 [ERROR] (rapid) Init failed InvokeID= error=exit code 0
+06 Sep 2024 05:37:25,943 [ERROR] (rapid) Invoke failed error=ErrAgentNameCollision InvokeID=1dfeb33d-8409-4d1a-b4fd-18ba368024b6
+06 Sep 2024 05:37:25,944 [ERROR] (rapid) Invoke DONE failed: Sandbox.Failure
+Lambda Function 'HelloWorldFunction' source code has been changed, terminate its warm container. The new container will be created in lazy mode
+
+Invalid lambda response received: Lambda response must be valid json
+2024-09-05 22:37:26 127.0.0.1 - - [05/Sep/2024 22:37:26] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+splunkeddyLayer is a local Layer in the template
+Building image....................
+Using local image: samcli/lambda-python:3.9-x86_64-9f7ebc814fead72980903b65a.
+
+Mounting /Users/joe/dev/splunkeddy/SampleLambda/sample-lambda-with-splunkeddy/.aws-sam/build/HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+START RequestId: c190a8b7-7f9a-465e-a9f1-869daeba62dc Version: $LATEST
+Extension started, attempting registration.
+06 Sep 2024 05:37:40,343 [ERROR] (rapid) Init failed error=exit code 0 InvokeID=
+06 Sep 2024 05:37:40,344 [ERROR] (rapid) Invoke failed error=ErrAgentNameCollision InvokeID=1d6d313e-154e-4e5c-b703-5815638dce8a
+06 Sep 2024 05:37:40,345 [ERROR] (rapid) Invoke DONE failed: Sandbox.Failure
+
+Invalid lambda response received: Lambda response must be valid json
+2024-09-05 22:37:41 127.0.0.1 - - [05/Sep/2024 22:37:41] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Lambda Function 'HelloWorldFunction' source code has been changed, terminate its warm container. The new container will be created in lazy mode
+splunkeddyLayer is a local Layer in the template
+Building image....................
+Using local image: samcli/lambda-python:3.9-x86_64-9f7ebc814fead72980903b65a.
+
+Mounting /Users/joe/dev/splunkeddy/SampleLambda/sample-lambda-with-splunkeddy/.aws-sam/build/HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+START RequestId: 7b9e11af-14ef-4b85-805a-92cc2a825412 Version: $LATEST
+Extension started, attempting registration.
+06 Sep 2024 05:37:52,846 [ERROR] (rapid) Init failed InvokeID= error=exit code 0
+06 Sep 2024 05:37:52,879 [ERROR] (rapid) Invoke failed InvokeID=9cbbdcae-5e60-4888-8a2a-72ae5e8fa180 error=ErrAgentNameCollision
+06 Sep 2024 05:37:52,880 [ERROR] (rapid) Invoke DONE failed: Sandbox.Failure
+
+Invalid lambda response received: Lambda response must be valid json
+2024-09-05 22:37:53 127.0.0.1 - - [05/Sep/2024 22:37:53] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Lambda Function 'HelloWorldFunction' source code has been changed, terminate its warm container. The new container will be created in lazy mode
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+START RequestId: eef27d75-1752-416e-ab1c-ded21f020d94 Version: $LATEST
+Extension started, attempting registration.
+06 Sep 2024 05:37:54,126 [ERROR] (rapid) Invoke failed error=exit code 0 InvokeID=4ac3f167-938b-4c54-aede-8c5398f9ac5c
+06 Sep 2024 05:37:54,126 [ERROR] (rapid) Invoke DONE failed: Extension.Crash
+
+Invalid lambda response received: Lambda response must be valid json
+2024-09-05 22:37:55 127.0.0.1 - - [05/Sep/2024 22:37:55] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+splunkeddyLayer is a local Layer in the template
+Building image....................
+Using local image: samcli/lambda-python:3.9-x86_64-9f7ebc814fead72980903b65a.
+
+Mounting /Users/joe/dev/splunkeddy/SampleLambda/sample-lambda-with-splunkeddy/.aws-sam/build/HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+06 Sep 2024 05:38:09,085 [ERROR] (rapid) Init failed InvokeID= error=exit code 0
+06 Sep 2024 05:38:09,093 [ERROR] (rapid) Invoke failed InvokeID=9cb22f1c-2dd2-4820-963b-035243b1083a error=ErrAgentNameCollision
+06 Sep 2024 05:38:09,095 [ERROR] (rapid) Invoke DONE failed: Sandbox.Failure
+
+Invalid lambda response received: Lambda response must be valid json
+2024-09-05 22:38:10 127.0.0.1 - - [05/Sep/2024 22:38:10] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Lambda Function 'HelloWorldFunction' source code has been changed, terminate its warm container. The new container will be created in lazy mode
+splunkeddyLayer is a local Layer in the template
+Building image....................
+Using local image: samcli/lambda-python:3.9-x86_64-9f7ebc814fead72980903b65a.
+
+Mounting /Users/joe/dev/splunkeddy/SampleLambda/sample-lambda-with-splunkeddy/.aws-sam/build/HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+START RequestId: 8bd430fc-c317-415f-a841-38ca395ade37 Version: $LATEST
+Extension started, attempting registration.
+06 Sep 2024 05:38:25,687 [ERROR] (rapid) Init failed error=exit code 0 InvokeID=
+06 Sep 2024 05:38:25,692 [ERROR] (rapid) Invoke failed error=ErrAgentNameCollision InvokeID=d88c179b-ef52-46e2-9058-63fe40c900fb
+06 Sep 2024 05:38:25,692 [ERROR] (rapid) Invoke DONE failed: Sandbox.Failure
+
+Invalid lambda response received: Lambda response must be valid json
+2024-09-05 22:38:26 127.0.0.1 - - [05/Sep/2024 22:38:26] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Lambda Function 'HelloWorldFunction' source code has been changed, terminate its warm container. The new container will be created in lazy mode
+splunkeddyLayer is a local Layer in the template
+Building image....................
+Using local image: samcli/lambda-python:3.9-x86_64-9f7ebc814fead72980903b65a.
+
+Mounting /Users/joe/dev/splunkeddy/SampleLambda/sample-lambda-with-splunkeddy/.aws-sam/build/HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+START RequestId: 3783b867-d72a-43b6-ae92-21bd80cdf4f9 Version: $LATEST
+Extension started, attempting registration.
+06 Sep 2024 05:38:42,087 [ERROR] (rapid) Init failed error=exit code 0 InvokeID=
+06 Sep 2024 05:38:42,140 [ERROR] (rapid) Invoke failed InvokeID=90327e04-386d-4a8e-8e9c-9742e8d1c27e error=ErrAgentNameCollision
+06 Sep 2024 05:38:42,141 [ERROR] (rapid) Invoke DONE failed: Sandbox.Failure
+
+Invalid lambda response received: Lambda response must be valid json
+2024-09-05 22:38:43 127.0.0.1 - - [05/Sep/2024 22:38:43] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Lambda function 'HelloWorldFunction' is already running
+Lambda Function 'HelloWorldFunction' source code has been changed, terminate its warm container. The new container will be created in lazy mode
+START RequestId: 349408b5-ce4c-4a98-8f0c-3ed037afb668 Version: $LATEST
+Extension started, attempting registration.
+06 Sep 2024 05:38:43,883 [ERROR] (rapid) Invoke failed error=exit code 0 InvokeID=a50b3163-7ab8-46b5-b916-f01dc6d28fcf
+06 Sep 2024 05:38:43,883 [ERROR] (rapid) Invoke DONE failed: Extension.Crash
+
+Invalid lambda response received: Lambda response must be valid json
+2024-09-05 22:38:44 127.0.0.1 - - [05/Sep/2024 22:38:44] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+Reuse the created warm container for Lambda function 'HelloWorldFunction'
+Exception on /invoke [GET]
+Traceback (most recent call last):
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/local/apigw/local_apigw_service.py", line 725, in _request_handler
+    lambda_response = self._invoke_lambda_function(route.function_name, route_lambda_event)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/local/apigw/local_apigw_service.py", line 618, in _invoke_lambda_function
+    self.lambda_runner.invoke(lambda_function_name, event_str, stdout=stdout_writer, stderr=self.stderr)
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/commands/local/lib/local_lambda.py", line 166, in invoke
+    self.local_runtime.invoke(
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/lib/telemetry/metric.py", line 325, in wrapped_func
+    return_value = func(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/local/lambdafn/runtime.py", line 227, in invoke
+    container = self.run(container, function_config, debug_context)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/local/lambdafn/runtime.py", line 177, in run
+    self._container_manager.run(container)
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/local/docker/manager.py", line 118, in run
+    container.start(input_data=input_data)
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/local/docker/container.py", line 377, in start
+    raise RuntimeError("Container does not exist. Cannot start this container")
+RuntimeError: Container does not exist. Cannot start this container
+2024-09-05 22:38:46 127.0.0.1 - - [05/Sep/2024 22:38:46] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Invoking app.lambda_handler (python3.9)
+splunkeddyLayer is a local Layer in the template
+Building image....................
+Using local image: samcli/lambda-python:3.9-x86_64-9f7ebc814fead72980903b65a.
+
+Mounting /Users/joe/dev/splunkeddy/SampleLambda/sample-lambda-with-splunkeddy/.aws-sam/build/HelloWorldFunction as /var/task:ro,delegated, inside runtime container
+
+Invalid lambda response received: Lambda response must be valid json
+2024-09-05 22:39:03 127.0.0.1 - - [05/Sep/2024 22:39:03] "[35m[1mGET /invoke HTTP/1.1[0m" 502 -
+Lambda Function 'HelloWorldFunction' source code has been changed, terminate its warm container. The new container will be created in lazy mode
+
+Error: dictionary changed size during iteration
+Traceback:
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/click/core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/click/core.py", line 1688, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/cli/cli_config_file.py", line 347, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/click/decorators.py", line 92, in new_func
+    return ctx.invoke(f, obj, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/lib/telemetry/metric.py", line 185, in wrapped
+    raise exception  # pylint: disable=raising-bad-type
+    ^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/lib/telemetry/metric.py", line 150, in wrapped
+    return_value = func(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/lib/utils/version_checker.py", line 43, in wrapped
+    actual_result = func(*args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/cli/main.py", line 95, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/commands/local/start_api/cli.py", line 150, in cli
+    do_cli(
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/commands/local/start_api/cli.py", line 232, in do_cli
+    with InvokeContext(
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/commands/local/cli_common/invoke_context.py", line 307, in __exit__
+    self._clean_running_containers_and_related_resources()
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/commands/local/cli_common/invoke_context.py", line 349, in _clean_running_containers_and_related_resources
+    cast(WarmLambdaRuntime, self.lambda_runtime).clean_running_containers_and_related_resources()
+  File "/usr/local/Cellar/aws-sam-cli/1.123.0/libexec/lib/python3.12/site-packages/samcli/local/lambdafn/runtime.py", line 539, in clean_running_containers_and_related_resources
+    for function_name, container in self._containers.items():
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^
+
+An unexpected error was encountered while executing "sam local start-api".
+Search for an existing issue:
+https://github.com/aws/aws-sam-cli/issues?q=is%3Aissue+is%3Aopen+Bug%3A%20sam%20local%20start-api%20-%20RuntimeError
+Or create a bug report:
+https://github.com/aws/aws-sam-cli/issues/new?template=Bug_report.md&title=Bug%3A%20sam%20local%20start-api%20-%20RuntimeError

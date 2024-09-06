@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -42,21 +41,21 @@ func logToFile(eventType, details string) {
 // Main function
 func main() {
 	fmt.Println("Extension started, attempting registration.")
-	extensionID := registerExtension()
+	// extensionId := registerExtension()
+	// fmt.Println("Extension registration successful. extensionId=" + extensionId)
+	// for {
+	// 	event := nextEvent(extensionID)
 
-	for {
-		event := nextEvent(extensionID)
-
-		switch event.Type {
-		case InitEvent:
-			logToFile(InitEvent, "Initialization event")
-		case InvokeEvent:
-			logToFile(InvokeEvent, "Invocation event")
-		case ShutdownEvent:
-			logToFile(ShutdownEvent, "Shutdown event")
-			return
-		}
-	}
+	// 	switch event.Type {
+	// 	case InitEvent:
+	// 		logToFile(InitEvent, "Initialization event")
+	// 	case InvokeEvent:
+	// 		logToFile(InvokeEvent, "Invocation event")
+	// 	case ShutdownEvent:
+	// 		logToFile(ShutdownEvent, "Shutdown event")
+	// 		return
+	// 	}
+	// }
 }
 
 // Register the extension with the Lambda environment
@@ -64,7 +63,7 @@ func registerExtension() string {
 	var (
 		extensionApiHost string = os.Getenv("AWS_LAMBDA_RUNTIME_API")
 		extensionUrl     string = fmt.Sprintf("http://%s/2020-01-01/extension", extensionApiHost)
-		registerPayload  string = `{"events":["INVOKE"]}`
+		registerPayload  string = `{"events":["INVOKE"]}` //TODO Add Shutdown phase as well.
 	)
 	reader := strings.NewReader(registerPayload)
 
@@ -81,7 +80,7 @@ func registerExtension() string {
 	fmt.Println("Request: ", req)
 
 	// Set the Lambda-Extension-Name header
-	req.Header.Set("Lambda-Extension-Name", "eddysplunk")
+	req.Header.Set("Lambda-Extension-Name", "splunkeddy")
 
 	// Send the request using http.DefaultClient
 	resp, err := http.DefaultClient.Do(req)
@@ -101,12 +100,17 @@ func registerExtension() string {
 		log.Fatal(err)
 	}
 
-	var result map[string]interface{}
-	json.NewDecoder(resp.Body).Decode(&result)
-	extensionID := result["extensionId"].(string)
+	// Extract the header value for "Lambda-Extension-Identifier"
+	var extensionId string = resp.Header.Get("Lambda-Extension-Identifier")
 
-	fmt.Println("Extension registration successful. extensionID:", extensionID)
-	return extensionID
+	if extensionId == "" {
+		log.Fatalf("Lambda-Extension-Identifier header not found")
+	}
+
+	// Use the extensionID as needed
+	fmt.Println("Extension ID:", extensionId)
+
+	return extensionId
 }
 
 // Get the next event from the Lambda runtime
@@ -123,7 +127,7 @@ func nextEvent(extensionID string) (event struct{ Type string }) {
 	}
 	defer response.Body.Close()
 
-	body, err := ioutil.ReadAll(response.Body)
+	body, err := io.ReadAll(response.Body)
 	if err != nil {
 		log.Fatal(err)
 	}

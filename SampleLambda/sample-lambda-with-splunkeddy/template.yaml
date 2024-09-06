@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Sample lambda with splunkeddy extension.
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+    MemorySize: 256
+
+Resources:
+  splunkeddyLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: splunkeddy-extension
+      Description: Adds splunk forwarding to lambda.
+      ContentUri: .  # Path to the folder containing the `extension.zip`
+      CompatibleRuntimes:
+        - nodejs12.x
+        - python3.9
+        - java11
+        - dotnetcore3.1
+
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      FunctionName: go-example-using-splunkeddy
+      CodeUri: hello_world/
+      Layers:
+        - !Ref splunkeddyLayer
+      Handler: app.lambda_handler
+      Runtime: python3.9
+      Architectures:
+        - x86_64
+      Events:
+        HelloWorld:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /invoke
+            Method: get
