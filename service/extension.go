@@ -1,4 +1,4 @@
-package extension
+package service
 
 import (
 	"bytes"
@@ -87,3 +87,5 @@ func (e *ExtensionService) Register(ctx context.Context, extensionName string) (
 
     return &res, nil // Return the parsed response
 }
+
+// func (e *ExtensionService) Register(ctx context.Context, extensionName string) (*RegisterResponse, error) {
