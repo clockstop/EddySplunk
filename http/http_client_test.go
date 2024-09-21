@@ -9,7 +9,7 @@ import (
 
 func TestCreateHTTPClient(t *testing.T) {
     // Call the function to get the HTTP client
-    client := http.CreateHTTPClient()
+    client := http.NewHTTPClient()
 
     // Check if the returned client is not nil
     if client == nil {
